@@ -4,7 +4,7 @@
 
 .sidenav {
     width: 13rem;
-    color: white;
+    color: red;
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(37,97,207,1) 0%, rgba(0,212,255,1) 100%);
 }
 img {
@@ -14,7 +14,7 @@ img {
 }
 
 .sidenav a {
-    color: black;
+    color: red;
 }
 
 .sidenav i {
@@ -26,4 +26,6 @@ img {
     color: black;
     background-color: rgba(3,151,215,0.176435540036327) 100%;
 }
+
+
 

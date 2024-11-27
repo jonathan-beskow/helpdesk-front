@@ -59,7 +59,11 @@ import { ToastrModule } from 'ngx-toastr';
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastrModule
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      closeButton: true,
+      progressBar: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
