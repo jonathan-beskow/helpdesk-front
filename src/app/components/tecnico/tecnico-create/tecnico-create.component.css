@@ -1,0 +1,59 @@
+html, body {
+   height: 100%;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container {
+   width: 35rem;
+   min-height: 90vh; /* Garante que o container ocupe quase toda a altura da página */
+   margin: auto;
+   padding: 1rem;
+   border-radius: .6rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between; /* Ajusta o espaçamento entre os elementos */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   margin-bottom: 2rem;
+}
+
+.fullwidth {
+   width: 100%;
+}
+
+form {
+   flex-grow: 1; /* Permite que o form cresça para ocupar o espaço restante no container */
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+img {
+   height: 12rem;
+   margin: 0 auto;
+}
+
+.section {
+   margin-bottom: 1rem;
+   display: flex;
+   justify-content: space-between;
+}
+
+button {
+   margin-top: .5rem;
+}
+
+mat-icon {
+   opacity: .6;
+}
+
+p {
+   opacity: .5;
+   text-align: center;
+}
+
+h1 {
+   text-align: center;
+}
