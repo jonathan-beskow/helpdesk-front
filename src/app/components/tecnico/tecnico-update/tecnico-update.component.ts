@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Tecnico } from 'src/app/models/tecnico';
 import { TecnicoService } from 'src/app/services/tecnico.service';
@@ -15,7 +15,8 @@ export class TecnicoUpdateComponent {
   constructor(
     private service: TecnicoService,
     private toastr: ToastrService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ){}
 
   tecnico: Tecnico = {
@@ -35,13 +36,21 @@ export class TecnicoUpdateComponent {
   senha: FormControl = new FormControl(null, Validators.minLength(3));
 
   ngOnInit(): void {
+    this.tecnico.id = this.route.snapshot.paramMap.get('id');
+    this.findById();
   }
 
+  findById(): void {
+    this.service.findById(this.tecnico.id).subscribe(resposta => {
+      resposta.perfis = []
+      this.tecnico = resposta;
+    })
+  }
   
   update(): void {
-    this.service.create(this.tecnico).subscribe({
+    this.service.update(this.tecnico).subscribe({
       next: () => {
-        this.toastr.success('Técnico cadastrado com sucesso', 'Cadastro');
+        this.toastr.success('Técnico atualizado com sucesso', 'Update');
         this.router.navigate(['tecnicos']);
       },
       error: (ex) => {
