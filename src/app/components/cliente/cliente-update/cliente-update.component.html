@@ -1,0 +1,81 @@
+<div class="container mat-elevation-z8">
+    <form class="form">
+        <h1 class="fullwidth">Editar Cliente</h1>
+        <img class="fullwidth" src="assets/img/cliente-create.svg" alt="Criação de Cliente">
+  
+        <section class="section">
+            <mat-checkbox (click)="addPerfil(0)" class="margin" color="primary">Admin</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(1)" [checked]="true" class="margin" color="primary">Cliente</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(2)" class="margin" color="primary">Cliente</mat-checkbox>
+        </section>
+  
+        <mat-form-field class="fullwidth" appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input 
+                [(ngModel)]="cliente.nome"
+                name="nome"
+                required 
+                matInput 
+                [formControl]="nome" 
+                placeholder="Ex.: João da Silva">
+            <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+  
+        <mat-form-field class="fullwidth" appearance="fill">
+            <mat-label>CPF</mat-label>
+            <input 
+                [(ngModel)]="cliente.cpf"
+                name="cpf"
+                required 
+                matInput 
+                [formControl]="cpf" 
+                placeholder="Ex.: 123.456.789-01"
+                mask="000.000.000-00">
+                
+            <mat-icon matSuffix>pin</mat-icon>
+        </mat-form-field>
+  
+        <mat-form-field class="fullwidth" appearance="fill">
+            <mat-label>E-mail</mat-label>
+            <input 
+                required 
+                [(ngModel)]="cliente.email"
+                name="email"
+                matInput 
+                [formControl]="email" 
+                placeholder="email@email.com">
+            <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+  
+        <mat-form-field class="fullwidth" appearance="fill">
+            <mat-label>Senha</mat-label>
+            <input 
+                required 
+                [(ngModel)]="cliente.senha"
+                name="senha"
+                matInput 
+                [formControl]="senha" 
+                placeholder="Password" 
+                type="password">
+            <mat-icon matSuffix>password</mat-icon>
+        </mat-form-field>
+  
+        <button 
+            mat-flat-button 
+            [disabled]="!validaCampos()" (click)="update()" 
+            color="primary" 
+            class="fullwidth mat-elevation-z4">
+            Atualizar
+        </button>
+        <button 
+            mat-stroked-button 
+            routerLink="../../" 
+            color="warn" 
+            class="fullwidth mat-elevation-z4">
+            Cancelar
+        </button>
+    </form>
+    <br>
+    <p class="fullwidth">Criação de Cliente</p>
+  </div>
+  

@@ -1,0 +1,39 @@
+.container {
+   width: 90%;
+   margin: auto;
+   margin-bottom: 2rem; /* Adiciona margem na parte inferior */
+}
+
+.mat-elevation-z8 {
+   margin-bottom: 2rem; /* Espaçamento entre o card e a base da página */
+}
+
+ 
+ table {
+    width: 100%;
+ }
+ 
+ mat-form-field {
+    width: 100%;
+ }
+ 
+ button {
+   width: 100%;
+   padding-bottom: 5px;
+   margin-bottom: 1rem; /* Adiciona espaçamento abaixo do botão */
+}
+
+ 
+ h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+ }
+ 
+ .edit {
+    color: rgb(0, 153, 255);
+ }
+ 
+ .delete {
+    color: red;
+ }
