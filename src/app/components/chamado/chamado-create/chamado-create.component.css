@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+}
+
+.container {
+    width: 45%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 5rem; /* O espaço restante será calculado automaticamente */
+}
+
+.full-width {
+    width: 100%;
+}
+
+h1, img {
+    text-align: center;
+}
+
+img {
+    height: 15rem;
+}
+
+.status-prioridade {
+    display: flex;
+    flex-direction: row; /* Alinha os elementos na horizontal */
+    justify-content: space-between; /* Cria espaço entre os elementos */
+    align-items: center; /* Alinha verticalmente os elementos */
+    gap: 1rem; /* Espaço fixo entre os selects */
+}
+
+.status-prioridade mat-form-field {
+    flex: 1; /* Faz os selects ocuparem o mesmo espaço */
+    min-width: 0; /* Previne que o conteúdo force o aumento da largura */
+}
+
+.descricao {
+    min-height: 6rem;
+    max-height: 10rem;
+}
+
+button {
+    margin-top: .5rem;
+}
